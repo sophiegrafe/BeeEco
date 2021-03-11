@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<header>
+    <nav class="container-base navbar-expand-lg navbar-light bg-light">
+        <a href="/Home/Index"><img class="logo-bee" src="~/images/Logo-bee.png" alt="the bee mascote" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">The Hive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Next</a>
+                </li>
+            </ul>
+        </div>
+        <a role="button" href="/Account/Login" class="btn btn-danger">LogIn</a>
+        <a role="button" href="/Itinary/NewTraject" class="btn btn-info">NewTrajet</a>
+        @*<form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>*@
+        <hr />
+    </nav>
+</header>
+
+
+<main class="container body-content">
+    @RenderBody()
+
+</main>
+<footer class="fixed-bottom container">
+    <hr />
+    <p>&copy; @DateTime.Now.Year - BeeEco Une application ASP.NET</p>
+</footer>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>
